@@ -7,14 +7,8 @@ window.config(padx=30, pady=10)
 
 conversions = {}
 conversion_table = pandas.read_csv('conversions.csv')
-
-conversions['units'] = conversion_table['units'].to_list()
-conversions['miles'] = conversion_table['miles'].to_list()
-conversions['km'] = conversion_table['km'].to_list()
-conversions['inches'] = conversion_table['inches'].to_list()
-conversions['AU'] = conversion_table['AU'].to_list()
-conversions['feet'] = conversion_table['feet'].to_list()
-print(conversions)
+for key in conversion_table:
+    conversions[key] = conversion_table[key].tolist()
 
 
 def calculate():
