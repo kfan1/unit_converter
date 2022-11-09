@@ -15,13 +15,6 @@ def calculate():
     convert = float(entry.get())
     index = conversions['units'].index(select_unit_b.get())
     converter = conversions[select_unit_a.get()][index]
-    print(select_unit_b.get())
-    print(select_unit_a.get())
-    print(index)
-    print(convert)
-    print(type(convert))
-    print(converter)
-    print(type(converter))
     converted = convert * converter
     converted_number['text'] = round(converted, 2)
 
